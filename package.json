@@ -1,0 +1,43 @@
+{
+  "name": "pug-scss-gulp-starter",
+  "version": "1.0.0",
+  "description": "scss/pug boilerplate for making layouts conveniently",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imprisoner/bem-bp.git"
+  },
+  "keywords": [
+    "pug",
+    "scss",
+    "js",
+    "gulp",
+    "webpack",
+    "bem",
+    "modularity"
+  ],
+  "author": "imprisoner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/imprisoner/bem-bp/issues"
+  },
+  "homepage": "https://github.com/imprisoner/bem-bp#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-pug": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.53.0",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-stream": "^7.0.0"
+  }
+}

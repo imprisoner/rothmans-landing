@@ -1,0 +1,48 @@
+.container {
+  margin: 0 auto;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat($grid-columns, 1fr);
+  column-gap: 30px;
+
+  @include max-width('md') {
+    column-gap: unset;
+  }
+}
+
+@each $suffix,
+$resolution in $breakpoints {
+  @for $i from 0 through 12 {
+    @if $suffix =='xs' {
+      @if $i ==0 {}
+
+      @else {
+        .col-#{$i} {
+          grid-column-end: span $i;
+        }
+      }
+
+      .offset-#{$i} {
+        grid-column-start: $i + 1;
+      }
+    }
+
+    @else {
+      @media (min-width: $resolution) {
+        @if $i ==0 {}
+
+        @else {
+          .col-#{$suffix}-#{$i} {
+            grid-column-end: span $i;
+          }
+        }
+
+        .offset-#{$suffix}-#{$i} {
+          grid-column-start: $i + 1;
+        }
+      }
+    }
+  }
+}

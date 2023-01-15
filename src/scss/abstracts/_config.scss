@@ -1,0 +1,17 @@
+/// setting up variables, maps and other stuff
+
+$header-height: '';
+$grid-container-width: 1080px;
+$grid-columns: 12;
+$grid-column-gap: 30px;
+$grid-row-gap: 0;
+$grid-column-width: ''; // if constant
+
+$breakpoints: (
+  'xs': 320px,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1280px,
+  'xxl': 1440px,
+);
