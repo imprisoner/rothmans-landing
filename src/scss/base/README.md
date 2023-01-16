@@ -1,2 +1,2 @@
 # base folder
-    styles for simple components like buttons, icons, etc
+    fonts, grid, common styles for all project

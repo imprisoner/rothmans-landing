@@ -1,0 +1,35 @@
+.main-header {
+  height: $header-height;
+  display: flex;
+  align-items: center;
+  background: $background;
+  padding-left: 35px;
+  padding-right: 35px;
+  box-shadow: 7px 7px 30px rgba(117, 117, 117, 0.17);
+  border-radius: 20px;
+
+  &__nav-list {
+    display: flex;
+    margin-left: 80px;
+  }
+
+  &__list-item {
+    &:not(:last-child) {
+      margin-right: 70px;
+    }
+
+  }
+
+  &__link {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &__actions {
+    margin-left: auto;
+  }
+
+  &__actions-item:first-child {
+    margin-right: 35px;
+  }
+}

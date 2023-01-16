@@ -1,0 +1,19 @@
+include ../../components/button.pug
+header.main-header.container
+  a(href="/").main-header__logo
+    include ../../includes/icons/logo.pug
+  nav.main-header__nav
+    ul.main-header__nav-list
+      li.main-header__list-item
+        +button("Главная", "#").button--pressed.main-header__link
+      li.main-header__list-item
+        +button("Главная", "#").main-header__link
+      li.main-header__list-item
+        +button("Главная", "#").main-header__link
+      li.main-header__list-item
+        +button("Главная", "#").main-header__link
+  .main-header__actions
+    button(type="button").button.button--round.button--elevated.main-header__actions-item
+      include ../../includes/icons/phone.pug
+    button(type="button").button.button--round.button--elevated.main-header__actions-item
+      include ../../includes/icons/menu.pug

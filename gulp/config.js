@@ -5,9 +5,9 @@ export const DIRECTORIES = {
   PUG: "pug/",
   SCSS: "scss/",
   ASSETS: "assets/",
-  FONTS: "assets/fonts",
-  IMAGES: "assets/images",
-  SVG: "assets/svg",
+  FONTS: "assets/fonts/",
+  IMAGES: "assets/images/",
+  SVG: "assets/svg/",
   SCRIPTS: "js/"
 }
 

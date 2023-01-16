@@ -1,0 +1,5 @@
+mixin button(content, href)
+  if href !== undefined
+    a(class= attributes.class href= href).button= content
+  else
+    button(class= attributes.class type= type).button= content

@@ -1,5 +1,7 @@
 extends ../layouts/main.pug
-
+include ../components/button.pug
 block page_content
-    h1 This is main page
-    include _main/some-section.pug
+  h1.text-heading.text-heading--1 Разработка вашего сайта
+  include _main/some-section.pug
+  +button("Главная").button
+  +button("Услуги", "/services").button.button--elevated
