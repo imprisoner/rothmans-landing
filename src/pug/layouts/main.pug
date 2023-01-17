@@ -6,7 +6,8 @@ html(lang="en")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet" href="/css/main.css")
     title Document
-  body 
-    include _main/header.pug
-    block page_content
-    include _main/footer.pug
+  body
+    #app
+      include _main/header.pug
+      block page_content
+      include _main/footer.pug
