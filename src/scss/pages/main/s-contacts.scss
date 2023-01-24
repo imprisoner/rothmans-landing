@@ -1,0 +1,17 @@
+.s-contacts {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  &__top {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  &__heading {
+    margin-bottom: 30px;
+  }
+
+  &__form {
+    row-gap: 30px;
+  }
+}

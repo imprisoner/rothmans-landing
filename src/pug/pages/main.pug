@@ -1,7 +1,8 @@
 extends ../layouts/main.pug
 include ../components/button.pug
 block page_content
-  h1.text-heading.text-heading--1 Разработка вашего сайта
-  include _main/some-section.pug
-  +button("Главная").button
-  +button("Услуги", "/services").button.button--elevated
+  include _main/s-title.pug
+  include _main/s-cases.pug
+  include _main/s-service.pug
+  include _main/s-stats.pug
+  include _main/s-contacts.pug

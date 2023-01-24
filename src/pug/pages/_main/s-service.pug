@@ -1,0 +1,37 @@
+include ../../components/menu.pug
+- var menuItems = ["Лендинг", "Интернет-магазин", "Корпоративный сайт", "Дизайн"]
+section.s-service
+  div.container
+    div.row.s-service__top
+      h2.text-heading.text-heading--2.col-lg-5 Услуги
+      +menu(menuItems)(class="s-service__nav col-lg-7")
+    div.row.s-service__menu
+      div.col-lg-7.offset-lg-5.s-service__menu-wrap
+        section.s-service__menu-section
+          h4.s-service__subheader.s-service__subheader--nowrap На конструкторе
+          ul.s-service__list
+            li.s-service__item #[a(href="#") Tilda]
+            li.s-service__item #[a(href="#") Flexbe]
+            li.s-service__item #[a(href="#") LPGenerator]
+            li.s-service__item #[a(href="#") Wix]
+            li.s-service__item #[a(href="#") Creatium]
+        section.s-service__menu-section
+          h4.s-service__subheader.s-service__subheader--nowrap На шаблоне CMS
+          ul.s-service__list
+            li.s-service__item #[a(href="#") Wordpress]
+            li.s-service__item #[a(href="#") Bitrix]
+            li.s-service__item #[a(href="#") Opencart]
+            li.s-service__item #[a(href="#") Modx]
+            li.s-service__item #[a(href="#") Joomla]
+        section.s-service__menu-section
+          h4.s-service__subheader Верстка + программирование
+          ul.s-service__list
+            li.s-service__item #[a(href="#") HTML]
+            li.s-service__item #[a(href="#") CSS]
+            li.s-service__item #[a(href="#") JS]
+            li.s-service__item #[a(href="#") PHP]
+            li.s-service__item #[a(href="#") Vue.js]
+            li.s-service__item #[a(href="#") React.js]
+            li.s-service__item #[a(href="#") Laravel]
+            li.s-service__item #[a(href="#") Symphony ]
+            li.s-service__item #[a(href="#") Различные CMS ]

@@ -1,35 +1,40 @@
 .text-heading {
   font-family: Akrobat;
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  line-height: 109.07%;
+  font-weight: 600;
+  line-height: 100%;
   text-transform: uppercase;
   color: $text;
 
   &--1 {
-    font-size: 72px;
+    font-size: 132px;
   }
 
   &--2 {
-    font-size: 48px;
+    font-size: 60px;
   }
 
   &--3 {
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 0.2em;
-    ;
   }
 }
 
 .text-body {
   font-weight: 400;
   font-size: 14px;
-  line-height: 17px;
-  letter-spacing: 0.055em;
+  line-height: 150%;
+  letter-spacing: 0.02em;
   color: $text--light;
 
   &--solid {
     color: $text;
+  }
+
+  &--16 {
+    font-size: 16px;
+  }
+  &--18 {
+    font-size: 18px;
   }
 }

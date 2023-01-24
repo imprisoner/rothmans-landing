@@ -1,0 +1,7 @@
+mixin case(image, num, name="Название проекта")
+  div.case
+    div.case__top
+      img(src=`/assets/images/${image}.png`).case__image
+    div.case__bottom
+      span.case__num.text-body.text-body--18= num
+      h3.case__title.text-body.text-body--18= name

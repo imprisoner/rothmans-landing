@@ -1,4 +1,19 @@
 /// setting up variables, maps and other stuff
 
-$header-height: 79px;
+$header-height: 130px;
+$header-width: 1250px;
+
 $fonts-path: '/assets/fonts/';
+
+$grid-container-width: 1180px;
+$grid-columns: 12;
+$grid-column-gap: 30px;
+$grid-row-gap: 0;
+$breakpoints: (
+  'xs': 320px,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1280px,
+  'xxl': 1440px,
+);

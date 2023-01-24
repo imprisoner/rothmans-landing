@@ -1,23 +1,16 @@
 .main-header {
   height: $header-height;
-  display: flex;
-  align-items: center;
   background: $background;
-  padding-left: 35px;
-  padding-right: 35px;
-  box-shadow: 7px 7px 30px rgba(117, 117, 117, 0.17);
-  border-radius: 20px;
 
-  &__nav-list {
+  &__wrapper {
     display: flex;
-    margin-left: 80px;
+    align-items: center;
+    height: 100%;
   }
 
-  &__list-item {
-    &:not(:last-child) {
-      margin-right: 70px;
-    }
-
+  &__list {
+    margin-left: 80px;
+    // column-gap: 40px;
   }
 
   &__link {
@@ -31,5 +24,9 @@
 
   &__actions-item:first-child {
     margin-right: 35px;
+  }
+
+  &__callback {
+    font-weight: 900;
   }
 }

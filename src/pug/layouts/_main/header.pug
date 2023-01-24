@@ -1,19 +1,14 @@
 include ../../components/button.pug
-header.main-header.container
-  a(href="/").main-header__logo
-    include ../../includes/icons/logo.pug
-  nav.main-header__nav
-    ul.main-header__nav-list
-      li.main-header__list-item
-        +button("Главная", "#").button--pressed.main-header__link
-      li.main-header__list-item
-        +button("Услуги", "#").main-header__link
-      li.main-header__list-item
-        +button("Кейсы", "#").main-header__link
-      li.main-header__list-item
-        +button("Контакты", "#").main-header__link
-  .main-header__actions
-    button(type="button").button.button--round.button--elevated.main-header__actions-item
-      include ../../includes/icons/phone.pug
-    button(type="button").button.button--round.button--elevated.main-header__actions-item
-      include ../../includes/icons/menu.pug
+include ../../components/menu.pug
+
+- var menuItems = ["Главная", "Услуги", "Кейсы", "Контакты"]
+header.main-header
+  div.main-header__wrapper.container
+    a(href="/").main-header__logo
+      include ../../../assets/svg/webmind_logo.svg
+    +menu(menuItems, true)
+    div.main-header__actions
+      button(type="button").button.button--elevated.main-header__callback
+        i.button__icon
+          include ../../../assets/svg/phone.svg
+        span.button__text +7 (965) 664-73-98

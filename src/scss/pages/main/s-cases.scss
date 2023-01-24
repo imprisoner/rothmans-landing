@@ -1,0 +1,12 @@
+.s-cases {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  &__top {
+    margin-bottom: 80px;
+    row-gap: 50px;
+  }
+
+  &__projects {
+    row-gap: 30px;
+  }
+}

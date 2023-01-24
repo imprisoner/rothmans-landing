@@ -1,0 +1,6 @@
+mixin menu(items, isHeaderMenu)
+  nav(class=[{"main-header__menu": isHeaderMenu}, attributes.class]).menu
+    ul(class={"main-header__list": isHeaderMenu}).menu__list
+      each item, index in items
+        li(class={"main-header__item": isHeaderMenu}).menu__item
+          +button(item)(class=[{"main-header__button": isHeaderMenu}, "menu__button", {"button--pressed": index === 0}])

@@ -1,0 +1,47 @@
+.s-service {
+  &__top {
+    margin-bottom: 80px;
+  }
+
+  // menu
+
+  &__menu-wrap {
+    display: flex;
+    gap: 80px;
+  }
+
+  &__menu-section {}
+
+  &__subheader {
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0.1em;
+    color: $text;
+    text-transform: uppercase;
+
+    &--nowrap {
+      width: max-content;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    row-gap: 14px;
+    column-gap: 40px;
+    max-height: 150px;
+  }
+
+  &__item {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $text;
+  }
+
+}
