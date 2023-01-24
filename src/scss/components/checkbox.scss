@@ -1,0 +1,32 @@
+.checkbox {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 16.5px;
+
+  &__view {
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    background: #5E5D79;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+      width: 6px;
+      height: 10px;
+      border-right: 2px solid $white;
+      border-bottom: 2px solid $white;
+      transform: rotate(45deg) translate(-25%, -15%);
+    }
+  }
+
+  &__input:checked ~ &__view::after {
+    content: "";
+  }
+
+  &__label-text {
+    color: rgba($text, 0.8)
+  }
+}
