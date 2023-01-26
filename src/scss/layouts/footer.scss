@@ -1,0 +1,23 @@
+.main-footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &__row {
+    align-items: center;
+  }
+
+  &__button {
+    padding: unset;
+    height: unset;
+  }
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+
+  // &__contacts {
+  //   display: flex;
+  //   row-gap: 90px;
+  // }
+
+  
+}

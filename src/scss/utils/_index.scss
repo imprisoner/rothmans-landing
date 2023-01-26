@@ -1,0 +1,35 @@
+.convex {
+    padding: 80px 0;
+    background: $background;
+    overflow-x: clip;
+    position: relative;
+
+    &::before, &::after {
+        height: 200px;
+        left: -200px;
+        right: -200px;
+        position: absolute;
+        z-index: -1;
+        background: $background;
+    }
+    
+    &--top {
+        &::before {
+            content: "";
+            top: -40px;
+            border-radius: 100% 100% 0 0;
+        }
+    }
+    
+    &--bottom {
+        &::after {
+            content: "";
+            bottom: -40px;
+            border-radius: 0 0 100% 100%;
+        }
+    }
+}
+
+.concane {
+    padding: 160px 0;
+}

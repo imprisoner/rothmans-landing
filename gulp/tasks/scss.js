@@ -11,7 +11,7 @@ const sass = gulpSass(dartSass)
 export default function scss(done) {
   src(GLOBS.SCSS.SRC)
     .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({includePaths: ["./node_modules"]}).on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(sourcemaps.write())
     .pipe(dest(GLOBS.SCSS.DEST))
