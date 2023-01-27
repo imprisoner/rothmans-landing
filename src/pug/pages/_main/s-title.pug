@@ -1,32 +1,34 @@
-section.s-slider.convex.convex--bottom
-  div.s-slider__container.container
-    div.s-slider__row.row
-      div.s-slider__content.col-12
-        div.swiper
-          div.s-slider__wrapper.swiper-wrapper
-            div.s-slider__item.swiper-slide
+include ../../components/slider-nav.pug
+
+section.s-title.convex.convex--bottom
+  div.s-title__container.container
+    div.s-title__row.row
+      div.s-title__content.col-12
+        div(id="title_slider").swiper
+          div.s-title__wrapper.swiper-wrapper
+            div.s-title__item.swiper-slide
               div.container  
-                div.row.s-slider__slide.offer
+                div.row.s-title__slide.offer
                   h1.offer__title.text-heading.text-heading--1
                     span.offer__chunk-1 Разработка
                     span.offer__chunk-2 вашего сайта
                   p.offer__text.text-body Делегируйте часть диджитал задач надёжным исполнителям без рискови зарабатывате больше
-            div.s-slider__item.swiper-slide
-              div.container  
-                div.row.offer
-                  h1.offer__title.text-heading.text-heading--1
-                    span.offer__chunk-1 Разработка
-                    span.offer__chunk-2 вашего сайта
-                  p.offer__text.text-body Делегируйте часть диджитал задач надёжным исполнителям без рискови зарабатывате больше
-            div.s-slider__item.swiper-slide
+            div.s-title__item.swiper-slide
               div.container  
                 div.row.offer
                   h1.offer__title.text-heading.text-heading--1
                     span.offer__chunk-1 Разработка
                     span.offer__chunk-2 вашего сайта
                   p.offer__text.text-body Делегируйте часть диджитал задач надёжным исполнителям без рискови зарабатывате больше
-    
-      div.s-slider__navigation.slider-nav.col-lg-3.offset-lg-1
+            div.s-title__item.swiper-slide
+              div.container  
+                div.row.offer
+                  h1.offer__title.text-heading.text-heading--1
+                    span.offer__chunk-1 Разработка
+                    span.offer__chunk-2 вашего сайта
+                  p.offer__text.text-body Делегируйте часть диджитал задач надёжным исполнителям без рискови зарабатывате больше
+      +slider-nav().s-title__navigation.col-lg-3.offset-lg-1      
+      //- div.s-title__navigation.slider-nav.col-lg-3.offset-lg-1
         button(type="button").slider-nav__prev.button.button--round.button--elevated
           include ../../../assets/svg/chevron_left.svg
         div.slider-nav__counter.text-body

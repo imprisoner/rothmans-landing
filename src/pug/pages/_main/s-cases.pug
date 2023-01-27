@@ -1,5 +1,6 @@
 include ../../components/case.pug
 include ../../components/menu.pug
+include ../../components/slider-nav.pug
 - var menuItems = ["Лендинг", "Интернет-магазин", "Корпоративный сайт", "Дизайн"]
 section.s-cases.concane
   div.container
@@ -8,12 +9,14 @@ section.s-cases.concane
       +menu(menuItems)(class="s-cases__nav col-lg-7")
       p.text-body.offset-lg-5.col-lg-3 Лендинг — это одностраничный сайтс краткой информацией о товаре, услуге или мероприятии. Его задача — превращать посетителей в клиентов.
       p.text-body.col-lg-3 Пользователи переходят на лендингпо ссылкам с рекламных баннеров, постов из соцсетей, электронных писем или СМС.
-    div.row.s-cases__projects
-      div.col-lg-6
-        +case("case-1", "01")
-      div.col-lg-6
-        +case("case-2", "02")
-      div.col-lg-6
-        +case("case-3", "03")
-      div.col-lg-6
-        +case("case-4", "04")
+    div(id="cases_slider").s-cases__slider.swiper
+      +slider-nav().s-cases__navigation
+      div.swiper-wrapper
+        div.swiper-slide
+          +case("case-1", "01")
+        div.swiper-slide
+          +case("case-2", "02")
+        div.swiper-slide
+          +case("case-3", "03")
+        div.swiper-slide
+          +case("case-4", "04")

@@ -7,15 +7,23 @@ const menusCollection = document.querySelectorAll(menuSelector)
 
 menusCollection.forEach(menu => initMenu(menu))
 
-const swiper = new Swiper('.swiper', {
+const titleSwiper = new Swiper('#title_slider', {
   modules: [Navigation],
-  // pagination: {
-  //   el: ".swiper-pagination",
-  //   clickable: true
-  // },
   spaceBetween:120,
   navigation: {
-    nextEl: ".slider-nav__next",
-    prevEl:".slider-nav__prev",
+    nextEl: ".s-title__navigation .slider-nav__next",
+    prevEl:".s-title__navigation .slider-nav__prev",
+  }
+})
+
+// 
+
+const casesSlider = new Swiper('#cases_slider', {
+  modules: [Navigation],
+  spaceBetween: 30,
+  slidesPerView: 2,
+  navigation: {
+    nextEl: ".s-title__navigation .slider-nav__next",
+    prevEl:".s-title__navigation .slider-nav__prev",
   }
 })

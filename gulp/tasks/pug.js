@@ -7,8 +7,13 @@ const { src, dest } = gulp
 export default function pug(done) {
   src(GLOBS.PUG.SRC)
     .pipe(pugCompiler({
-      verbose: true
+      verbose: true,
     }))
+    .on('error', handleError)
     .pipe(dest(GLOBS.PUG.DEST))
   done()
+}
+
+function handleError(err) {
+  console.log(err)
 }
