@@ -1,9 +1,9 @@
-include ../../components/slider-nav.pug
+include ../../components/slides-counter.pug
 
 section.s-title.convex.convex--bottom
   div.s-title__container.container
-    div.s-title__row.row
-      div.s-title__content.col-12
+    div.s-title__content.row
+      div.col-12.s-title__slider
         div(id="title_slider").swiper
           div.s-title__wrapper.swiper-wrapper
             div.s-title__item.swiper-slide
@@ -27,15 +27,11 @@ section.s-title.convex.convex--bottom
                     span.offer__chunk-1 Разработка
                     span.offer__chunk-2 вашего сайта
                   p.offer__text.text-body Делегируйте часть диджитал задач надёжным исполнителям без рискови зарабатывате больше
-      +slider-nav().s-title__navigation.col-lg-3.offset-lg-1      
-      //- div.s-title__navigation.slider-nav.col-lg-3.offset-lg-1
-        button(type="button").slider-nav__prev.button.button--round.button--elevated
+      div.s-title__controls.slider-controls.col-lg-3.offset-lg-1
+        button(type="button").s-title__button-prev.button.button--round.button--elevated
           include ../../../assets/svg/chevron_left.svg
-        div.slider-nav__counter.text-body
-          span.slider-nav__current 01
-          span.slider-nav__hyphen
-          span.slider-nav__total 04
-        button(type="button").slider-nav__next.button.button--round.button--elevated
+        +slides-counter(class="s-title__counter" id="title_counter")
+        button(type="button").s-title__button-next.button.button--round.button--elevated
           include ../../../assets/svg/chevron_right.svg
   div.container
     div.row

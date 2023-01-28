@@ -1,14 +1,34 @@
 .s-cases {
-
-  // padding-top: 120px;
-  // padding-bottom: 120px;
   &__top {
-    margin-bottom: 80px;
     row-gap: 50px;
     align-items: center;
   }
+  &__content {
+    padding-top: 80px;
+    position: relative;
+  }
+  // slider-nav
+  &__controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: 1 / 1 / 3 / 13;
+  }
+  
+  &__slider {
+    grid-area: 1 / 1 / 3 / 13;
+  }
 
-  &__projects {
-    row-gap: 30px;
+  &__button-prev {
+    margin-left: -80px;
+  }
+
+  &__button-next {
+    margin-right: -80px;
+  }
+
+  &__counter {
+    position: absolute;
+    top: 0;
   }
 }
