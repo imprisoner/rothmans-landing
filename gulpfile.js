@@ -25,3 +25,4 @@ export const dev = series(
   )
   
 export const cleanOutput = clean
+export const compileScss = scss

@@ -11,6 +11,12 @@
   text-transform: uppercase;
   color: $white;
   text-align: center;
+
+  @include max-width(md) {
+    height: 69px;
+    width: 100%;
+  }
+
   &--pressed {
     background: $background;
     /* hover 2 */

@@ -2,29 +2,14 @@
   height: $header-height;
   background: $background;
 
-  @include max-width(md) {
-    height: 90px;
-  }
-
   &__wrapper {
     display: flex;
     align-items: center;
     height: 100%;
   }
 
-  &__menu {
-    margin-left: 80px;
-
-    @include max-width(xxl) {
-      margin-left: auto;
-    }
-
-    @include max-width(md) {
-      display: none;
-    }
-  }
-
   &__list {
+    margin-left: 80px;
     column-gap: 6px;
   }
 
@@ -39,5 +24,11 @@
 
   &__actions-item:first-child {
     margin-right: 35px;
+  }
+
+  &__callback {
+    font-weight: 900;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }

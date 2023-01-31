@@ -1,0 +1,8 @@
+mixin slider-controls(selectors)
+  div.slider-controls&attributes(attributes)
+    button(type="button" class= selectors.buttonPrevClass).slider-controls__button.slider-controls__prev
+      include ../../assets/svg/chevron_left.svg
+    if block
+      block    
+    button(type="button" class= selectors.buttonNextClass).slider-controls__button.slider-controls__next
+      include ../../assets/svg/chevron_right.svg

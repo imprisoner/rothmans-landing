@@ -1,13 +1,31 @@
 .s-title {
   background: $background;
+
+  @include max-width(md) {
+    padding-top: 40px;
+  }
+
   &__container {
-    margin-bottom: 60px;
+    @include max-width(md) {
+      position: relative;
+    }
   }
   &__content {
     grid-template-rows: repeat(2, 1fr);
+    margin-bottom: 60px;
+    
+    @include max-width(xl) {
+      grid-template-rows: repeat(2, auto);
+    }
+    @include max-width(md) {
+      margin-bottom: 30px;
+    }
   }
   &__slider {
     grid-area: 1/1/3/13;
+    @include max-width(md) {
+      grid-area: 1/1/2/13;
+    }
   }
 
   &__controls {
@@ -15,18 +33,54 @@
     display: flex;
     gap: 30px;
     align-items: center;
+    align-self: flex-end;
     position: relative;
     z-index: 2;
+    margin-bottom: 12px;
+
+    @include max-width(xl) {
+      grid-area: 2/9/3/13;
+      align-self: auto;
+      margin-bottom: unset;
+    }
+
+    @include max-width(md) {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -30px;
+      justify-content: space-between;
+      transform: translateY(100%);
+      align-self: unset;
+    }
+  }
+
+  &__actions {
+    justify-items: center;
+
+    @include max-width(md) {
+      justify-items: stretch;
+    }
   }
 }
 
 .offer {
   grid-template-rows: repeat(2, 1fr);
   align-items: center;
+
+  @include max-width(xl) {
+    grid-template-rows: repeat(2, auto);
+    row-gap: 30px;
+  }
+
   &__title {
     grid-area: 1 / 1 / 3 / 13;
     flex-wrap: wrap;
     display: flex;
+
+    @include max-width(xl) {
+      grid-area: 1/1/2/13;
+    }
   }
 
   &__chunk-1 {
@@ -35,9 +89,21 @@
 
   &__chunk-2 {
     margin-left: auto;
+
+    @include max-width(md) {
+      margin-left: unset;
+    }
   }
 
   &__text {
     grid-area: 1 / 8 / 1 / 11;
+
+    @include max-width(xl) {
+      grid-area: 2/1/3/8;
+    }
+
+    @include max-width(md) {
+      grid-area: 2/1/3/10;
+    }
   }
 }

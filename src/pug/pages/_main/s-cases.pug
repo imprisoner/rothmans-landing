@@ -5,17 +5,20 @@ include ../../components/slides-counter.pug
 section.s-cases.concane
   div.container
     article.row.s-cases__top
-      h2.text-heading.text-heading--2.col-lg-5 Кейсы
-      +menu(menuItems)(class="s-cases__nav col-lg-7")
-      p.text-body.offset-lg-5.col-lg-3 Лендинг — это одностраничный сайтс краткой информацией о товаре, услуге или мероприятии. Его задача — превращать посетителей в клиентов.
-      p.text-body.col-lg-3 Пользователи переходят на лендингпо ссылкам с рекламных баннеров, постов из соцсетей, электронных писем или СМС.
+      h2.s-cases__heading.text-heading.text-heading--2.col-xl-5.col-12 Кейсы
+      +menu(menuItems)(class="s-cases__menu col-xl-7 col-12")
+      p.s-cases__chunk-1.text-body.offset-xl-5.col-xl-3.col-md-6.col-12 Лендинг — это одностраничный сайтс краткой информацией о товаре, услуге или мероприятии. Его задача — превращать посетителей в клиентов.
+      p.text-body.col-xl-3.col-md-6.col-12 Пользователи переходят на лендингпо ссылкам с рекламных баннеров, постов из соцсетей, электронных писем или СМС.
     div.row.s-cases__content
-      div.s-cases__controls.slider-controls.col-lg-12
-        button(type="button").s-cases__button-prev.slider-nav__prev.button.button--round.button--elevated
-          include ../../../assets/svg/chevron_left.svg
+      -
+        const casesControlsSelectors = {
+          buttonPrevClass: "s-cases__button-prev",
+          buttonNextClass: "s-cases__button-next",
+        }
+
+      +slider-controls(casesControlsSelectors).s-cases__controls
         +slides-counter.s-cases__counter#cases_counter
-        button(type="button").s-cases__button-next.slider-nav__next.button.button--round.button--elevated
-          include ../../../assets/svg/chevron_right.svg
+
       div.col-lg-12.s-cases__slider
         div(id="cases_slider").swiper
           div.swiper-wrapper

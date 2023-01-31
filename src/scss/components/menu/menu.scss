@@ -1,0 +1,22 @@
+.menu {
+  // TODO
+  &__list {
+    display: flex;
+    column-gap: 25px;
+    
+    @include max-width(xxl) {
+      justify-content: center;
+    }
+    @include max-width(md) {
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    @include max-width(md) {
+      flex: 0.5;
+      text-align: center;
+    }
+  }
+}

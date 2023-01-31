@@ -1,5 +1,15 @@
 .container {
   margin: 0 auto;
+  width: 1180px;
+  @include max-width(xl) {
+    max-width: 708px;
+    width: auto;
+    // margin: 0 30px;
+    // width: auto;
+  }
+  @include max-width(md) {
+    margin: 0 15px;
+  }
 }
 
 .row {

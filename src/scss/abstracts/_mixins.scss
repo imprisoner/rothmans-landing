@@ -30,3 +30,7 @@
     @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. " + "Please make sure it is defined in `#{$breakpoints}` map.";
   }
 }
+
+@mixin button-elevation {
+  box-shadow: -10px -10px 18px #FFFFFF, 10px 10px 18px rgba(94, 93, 121, 0.1);
+}

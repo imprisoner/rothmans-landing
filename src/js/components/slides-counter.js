@@ -29,16 +29,3 @@ export default class SlidesCounter {
 function parseNum(num) {
   return num > 9 ? `${num}` : `0${num}`
 }
-// export default function initSlidesCounter(el) {
-//   const current = el.querySelector(selectors.current)
-//   const total = el.querySelector(selectors.total)
-
-//   return {
-//     setTotal(num) {
-//       total.innerText = num
-//     },
-//     setCurrent(num) {
-//       current.innerText = num
-//     }
-//   }
-// }

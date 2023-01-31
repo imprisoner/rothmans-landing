@@ -1,3 +1,4 @@
+include ../../components/slider-controls.pug
 include ../../components/slides-counter.pug
 
 section.s-title.convex.convex--bottom
@@ -7,33 +8,40 @@ section.s-title.convex.convex--bottom
         div(id="title_slider").swiper
           div.s-title__wrapper.swiper-wrapper
             div.s-title__item.swiper-slide
-              div.container  
+              div.s-title__slide-wrapper
                 div.row.s-title__slide.offer
                   h1.offer__title.text-heading.text-heading--1
                     span.offer__chunk-1 Разработка
                     span.offer__chunk-2 вашего сайта
-                  p.offer__text.text-body Делегируйте часть диджитал задач надёжным исполнителям без рискови зарабатывате больше
+                  p.offer__text.text-body Делегируйте часть диджитал задач надёжным исполнителям без рисков и зарабатывате больше
             div.s-title__item.swiper-slide
-              div.container  
+              div.s-title__slide-wrapper
                 div.row.offer
                   h1.offer__title.text-heading.text-heading--1
                     span.offer__chunk-1 Разработка
                     span.offer__chunk-2 вашего сайта
-                  p.offer__text.text-body Делегируйте часть диджитал задач надёжным исполнителям без рискови зарабатывате больше
+                  p.offer__text.text-body Делегируйте часть диджитал задач надёжным исполнителям без рисков и зарабатывате больше
             div.s-title__item.swiper-slide
-              div.container  
+              div.s-title__slide-wrapper
                 div.row.offer
                   h1.offer__title.text-heading.text-heading--1
                     span.offer__chunk-1 Разработка
                     span.offer__chunk-2 вашего сайта
-                  p.offer__text.text-body Делегируйте часть диджитал задач надёжным исполнителям без рискови зарабатывате больше
-      div.s-title__controls.slider-controls.col-lg-3.offset-lg-1
+                  p.offer__text.text-body Делегируйте часть диджитал задач надёжным исполнителям без рисков и зарабатывате больше
+      - 
+        const titleControlsSelectors = {
+          buttonPrevClass: "s-title__button-prev",
+          buttonNextClass: "s-title__button-next",
+        }
+      +slider-controls(titleControlsSelectors).s-title__controls
+        +slides-counter(class="s-title__counter" id="title_counter")
+
+      //- div.s-title__controls.slider-controls.col-lg-3.offset-lg-1
         button(type="button").s-title__button-prev.button.button--round.button--elevated
           include ../../../assets/svg/chevron_left.svg
         +slides-counter(class="s-title__counter" id="title_counter")
         button(type="button").s-title__button-next.button.button--round.button--elevated
           include ../../../assets/svg/chevron_right.svg
-  div.container
-    div.row
-      div.col-lg-4.offset-lg-4
-        button(type="button").button-xl Связаться
+    div.s-title__actions.row
+      div.col-12
+        button(type="button").s-title__contact.button-xl Связаться

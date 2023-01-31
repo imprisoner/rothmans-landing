@@ -1,0 +1,19 @@
+.slider-controls {
+  display: flex;
+  gap: 30px;
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 9999px;
+    color: $text;
+    @include button-elevation;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+}

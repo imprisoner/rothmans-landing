@@ -17,7 +17,8 @@ export default function watch(done) {
   gulp.watch(SOURCE_FOLDER + DIRECTORIES.IMAGES, { ignoreInitial: false }, series(images, reload))
   gulp.watch(SOURCE_FOLDER + DIRECTORIES.SVG, { ignoreInitial: false }, series(svg, reload))
   gulp.watch(SOURCE_FOLDER + DIRECTORIES.SCRIPTS + "pages", { ignoreInitial: false }, series(scriptsPages, reload))
-  gulp.watch(SOURCE_FOLDER + DIRECTORIES.SCRIPTS + "vendor", { ignoreInitial: false }, series(scriptsPages, reload))
+  gulp.watch(SOURCE_FOLDER + DIRECTORIES.SCRIPTS + "components", { ignoreInitial: false }, series(scriptsPages, reload))
+  gulp.watch(SOURCE_FOLDER + DIRECTORIES.SCRIPTS + "vendor", { ignoreInitial: false }, series(scriptsVendor, reload))
 
   done()
 }
