@@ -17,8 +17,10 @@
     width: 100%;
   }
 
-  &:hover {
-    color: $text--lighter;
+  @media (hover: hover) {
+    &:hover {
+      color: $text--lighter;
+    }
   }
 
   // &:active {

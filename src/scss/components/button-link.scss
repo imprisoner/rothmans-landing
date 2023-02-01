@@ -2,6 +2,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 12px;
   // height: 50px;
   border-radius: 100px;
   color: $text--light;
@@ -15,6 +16,5 @@
     width: 14px;
     height: 14px;
     display: block;
-    margin-right: 12px;
   }
 }

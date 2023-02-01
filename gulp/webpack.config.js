@@ -8,18 +8,13 @@ const __dirname = path.dirname(__filename)
 
 const JS_DIR = path.resolve(__dirname, "../src/js")
 const PAGES_DIR = path.resolve(JS_DIR, "pages")
-// const UTILS_DIR = path.resolve(JS_DIR, "utils")
-console.log(PAGES_DIR)
+
 const pageScripts = fs
   .readdirSync(PAGES_DIR, {
     withFileTypes: true
   })
   .filter(item => item.isFile() && item.name.split('.').pop() === 'js' )
   .map(item => [item.name.replace(".js", ""), { import: "@pages/" + item.name }])
-// const utils = fs
-//   .readdirSync(UTILS_DIR)
-//   .filter(filename => filename !== "index.js")
-//   .map(filename => path.resolve(UTILS_DIR, filename))
 
 export default {
   mode: "development",
@@ -27,12 +22,11 @@ export default {
     extensions: [".js", ".mjs"],
     alias: {
       "@": JS_DIR,
-      "@pages": PAGES_DIR// "utils": UTILS_DIR
+      "@pages": PAGES_DIR
     }
   },
   devtool: "inline-source-map",
   entry: {
-    // utils: utils,
     ...Object.fromEntries(pageScripts),
   },
   output: {

@@ -22,7 +22,7 @@
       row-gap: 15px;
       align-items: flex-start;
     }
-    @include max-width(xl) {
+    @include max-width(md) {
       row-gap: 20px;
       align-items: center;
     }

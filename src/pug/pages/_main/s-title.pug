@@ -1,7 +1,7 @@
 include ../../components/slider-controls.pug
 include ../../components/slides-counter.pug
 
-section.s-title.convex.convex--bottom
+section(id="title").s-title.convex.convex--bottom
   div.s-title__container.container
     div.s-title__content.row
       div.col-12.s-title__slider
@@ -36,12 +36,6 @@ section.s-title.convex.convex--bottom
       +slider-controls(titleControlsSelectors).s-title__controls
         +slides-counter(class="s-title__counter" id="title_counter")
 
-      //- div.s-title__controls.slider-controls.col-lg-3.offset-lg-1
-        button(type="button").s-title__button-prev.button.button--round.button--elevated
-          include ../../../assets/svg/chevron_left.svg
-        +slides-counter(class="s-title__counter" id="title_counter")
-        button(type="button").s-title__button-next.button.button--round.button--elevated
-          include ../../../assets/svg/chevron_right.svg
     div.s-title__actions.row
       div.col-12
         button(type="button").s-title__contact.button-xl Связаться

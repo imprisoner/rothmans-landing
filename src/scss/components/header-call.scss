@@ -21,15 +21,17 @@
     color: $text--lighter;
   }
 
-  @include max-width(xxl) {
+  @include max-width(xl) {
     padding: unset;
     width: 46px;
     height: 46px;
     border-radius: 9999px;
   }
-
+  // &__icon {
+  //   margin-right: unset;
+  // }
   &__text {
-    @include max-width(xxl) {
+    @include max-width(xl) {
       display: none;
     }
   }

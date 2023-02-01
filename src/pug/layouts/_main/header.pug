@@ -1,14 +1,24 @@
-include ../../components/button.pug
 include ../../components/menu.pug
 
-- var menuItems = ["Главная", "Услуги", "Кейсы", "Контакты"]
+//- - var menuItems = ["Главная", "Услуги", "Кейсы", "Контакты"]
 header.main-header
   div.main-header__wrapper.container
     a(href="/").main-header__logo
       include ../../../assets/svg/webmind_logo.svg
-    +menu(menuItems, true)
+    nav(class="main-header__menu menu")
+      ul(class="main-header__list").menu__list
+        li(class="main-header__item").menu__item
+          a(href="#title" class="main-header__button menu__button menu__button--pressed") Главная
+        li(class="main-header__item").menu__item
+          a(href="#service" class="main-header__button menu__button") Услуги
+        li(class="main-header__item").menu__item
+          a(href="#cases" class="main-header__button menu__button") Кейсы
+        li(class="main-header__item").menu__item
+          a(href="#contacts" class="main-header__button menu__button") Контакты
+          //- each item, index in items
+    //- +menu(menuItems, true)
     div.main-header__actions
       button(type="button").button-link.main-header__call.header-call
         i.button-link__icon.header-call__icon
           include ../../../assets/svg/phone.svg
-        span.header-call__text.button__text +7 (965) 664-73-98
+        span.header-call__text.button-link__text +7 (965) 664-73-98
