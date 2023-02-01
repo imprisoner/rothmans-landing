@@ -7,8 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "gulp dev",
-    "tasks": "gulp --tasks",
-    "scss": "gulp compileScss"
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
