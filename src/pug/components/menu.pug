@@ -3,4 +3,7 @@ mixin menu(items, isHeaderMenu)
     ul(class={"main-header__list": isHeaderMenu}).menu__list
       each item, index in items
         li(class={"main-header__item": isHeaderMenu}).menu__item
-          +button(item)(class=[{"main-header__button": isHeaderMenu}, "menu__button", {"menu__button--pressed": index === 0}])
+          if (isHeaderMenu)
+            a(href="" class=["main-header__button", "menu__button", {"menu__button--pressed": index === 0}])= item
+          else
+            button(type="button" class=["menu__button", {"menu__button--pressed": index === 0}])= item

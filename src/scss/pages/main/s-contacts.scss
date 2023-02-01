@@ -2,19 +2,42 @@
   padding-bottom: 120px;
 
   &__top {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     text-align: center;
-  }
+    row-gap: 30px;
 
-  &__heading {
-    margin-bottom: 30px;
+    @include max-width(md) {
+      margin-bottom: 50px;
+    }
   }
 
   &__form {
     row-gap: 30px;
+
+    @include max-width(md) {
+      row-gap: 20px;
+    }
+  }
+
+  &__actions {
+    justify-self: center;
+
+    @include max-width(md) {
+      justify-self: stretch;
+    }
   }
 
   &__policy {
     justify-content: center;
+    @include max-width(md) {
+      justify-content: start;
+      align-items: start;
+    }
+  }
+
+  &__policy-text {
+    @include max-width(md) {
+      width: 225px;
+    }
   }
 }

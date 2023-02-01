@@ -1,3 +1,11 @@
 .s-stats {
- 
+ &__wrapper {
+  row-gap: 40px;
+  @include max-width(xl) {
+    row-gap: 30px;
+  }
+  @include max-width(md) {
+    row-gap: 20px;
+  }
+ }
 }

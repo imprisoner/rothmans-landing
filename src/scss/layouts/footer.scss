@@ -4,6 +4,28 @@
 
   &__row {
     align-items: center;
+
+    @include max-width(xl) {
+      align-items: flex-start;
+    }
+    @include max-width(md) {
+      row-gap: 30px;
+      text-align: center;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    @include max-width(xl) {
+      flex-direction: column;
+      row-gap: 15px;
+      align-items: flex-start;
+    }
+    @include max-width(xl) {
+      row-gap: 20px;
+      align-items: center;
+    }
   }
 
   &__button {

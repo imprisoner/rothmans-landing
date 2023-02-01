@@ -17,7 +17,7 @@ const selectors = {
 const menusCollection = document.querySelectorAll(selectors.menus)
 
 menusCollection.forEach(menu => initMenu(menu))
-
+console.log(menusCollection)
 
 const titleCounter = new SlidesCounter(selectors.counters.title)
 
@@ -40,10 +40,14 @@ const casesCounter = new SlidesCounter(selectors.counters.cases)
 const casesSlider = new Swiper(selectors.sliders.cases, {
   modules: [Navigation],
   spaceBetween: 30,
-  slidesPerView: 2,
   navigation: {
     prevEl:".s-cases__button-prev",
     nextEl: ".s-cases__button-next",
+  },
+  breakpoints: {
+    1280: {
+      slidesPerView: 2
+    }
   },
   on: {
     init: (swiper) => casesCounter.init(swiper.slides.length),

@@ -11,6 +11,10 @@
   letter-spacing: 0.1em;
   border: none;
 
+  @include max-width(md) {
+    height: 69px;
+  }
+
   &::placeholder {
     color: $text--lighter;
   }

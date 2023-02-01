@@ -1,4 +1,4 @@
-const buttonActiveClass = "button--pressed"
+const buttonActiveClass = "menu__button--pressed"
 
 function setActiveButton(event, siblings) {
   if (event.target.classList.contains(buttonActiveClass)) {
@@ -10,7 +10,7 @@ function setActiveButton(event, siblings) {
 }
 
 export default function initMenu(menuEl) {
-  const buttons = menuEl.querySelectorAll("button")
+  const buttons = menuEl.querySelectorAll(".menu__button")
 
   buttons.forEach(button => {
     button.addEventListener("click", (event) => setActiveButton(event, buttons))

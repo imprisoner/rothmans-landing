@@ -1,3 +1,5 @@
+$mobile-gap: 10px;
+
 .menu {
   // TODO
   &__list {
@@ -15,7 +17,7 @@
 
   &__item {
     @include max-width(md) {
-      flex: 0.5;
+      flex-basis: calc(50% - $mobile-gap / 2);
       text-align: center;
     }
   }
