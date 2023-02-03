@@ -6,7 +6,13 @@ section(id="cases").s-cases.concane
   div.container
     div.row.s-cases__top
       h2.s-cases__heading.text-heading.text-heading--2.col-xl-5.col-12 Кейсы
-      +menu(menuItems)(class="s-cases__menu col-xl-7 col-12")
+      -
+        var casesMenuChildSelectors = {
+          list: "cases-menu__list",
+          item: "cases-menu__item",
+          button: "cases-menu__button"
+        }
+      +menu(menuItems, casesMenuChildSelectors)(class="s-cases__menu cases-menu col-xl-7 col-12")
     div.s-cases__text.row
       p.s-cases__chunk-1.text-body.offset-xl-5.col-xl-3.col-md-6.col-12 Лендинг — это одностраничный сайтс краткой информацией о товаре, услуге или мероприятии. Его задача — превращать посетителей в клиентов.
       p.text-body.col-xl-3.col-md-6.col-12 Пользователи переходят на лендингпо ссылкам с рекламных баннеров, постов из соцсетей, электронных писем или СМС.

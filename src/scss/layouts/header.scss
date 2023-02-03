@@ -1,6 +1,6 @@
 .main-header {
   height: $header-height;
-  background: $background;
+  background: $background-1;
 
   @include max-width(md) {
     height: 90px;

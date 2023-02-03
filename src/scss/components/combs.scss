@@ -1,0 +1,6 @@
+.combs {
+  position: absolute;
+  @include max-width(md) {
+    display: none;
+  }
+}

@@ -1,14 +1,15 @@
 .s-title {
-  background: $background;
+  background: $background-1;
+  // position: relative;
 
   @include max-width(md) {
     padding-top: 40px;
   }
 
   &__container {
-    @include max-width(md) {
+    // @include max-width(md) {
       position: relative;
-    }
+    // }
   }
   &__content {
     grid-template-rows: repeat(2, 1fr);
@@ -60,6 +61,27 @@
 
     @include max-width(md) {
       justify-items: stretch;
+    }
+  }
+
+  &__combs-1 {
+    position: absolute;
+    bottom: -80px;
+    left: -80px;
+
+    @include max-width(xl) {
+      bottom: -50px;
+      left: -270px;
+    }
+  }
+  &__combs-2 {
+    position: absolute;
+    top: -80px;
+    right: -110px;
+
+    @include max-width(xl) {
+      top: -70px;
+      right: -210px;
     }
   }
 }

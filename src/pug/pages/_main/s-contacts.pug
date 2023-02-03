@@ -1,7 +1,10 @@
 section(id="contacts").s-contacts.convex.convex--top
-  div.container
+  div.s-contacts__container.container
+    div.combs.s-contacts__combs-1
+      include ../../../assets/svg/combs-4.svg
+    div.combs.s-contacts__combs-2
+      include ../../../assets/svg/combs-5.svg
     div.s-contacts__top.row
-      //- div.col-lg-4.col-sm-6.col-12.offset-lg-4.offset-sm-3
       h2.s-contacts__heading.col-12.text-heading.text-heading--2 Контакты
       p.s-contacts__text.col-12.text-body.text-body--18 У вас есть инетерсный проект? #[br] Напишите нам, и мы его разработаем
     form.s-contacts__form.row
@@ -18,4 +21,4 @@ section(id="contacts").s-contacts.convex.convex--top
           p.s-contacts__policy-text.checkbox__label-text.text-body Нажимая на кнопку «Отправить», я принимаю условия политики конфиденциальности
         //- checkbox
       div.s-contacts__actions.col-12
-        button(type="submit").button-xl Отправить
+        button(type="submit").button-xl.button-xl--pressed Отправить

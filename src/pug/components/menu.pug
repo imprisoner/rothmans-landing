@@ -1,9 +1,6 @@
-mixin menu(items, isHeaderMenu)
-  nav(class={"main-header__menu": isHeaderMenu}).menu&attributes(attributes)
-    ul(class={"main-header__list": isHeaderMenu}).menu__list
+mixin menu(items, childSelectors={list: "", item: "", button: ""})
+  nav.menu&attributes(attributes)
+    ul(class= childSelectors.list).menu__list
       each item, index in items
-        li(class={"main-header__item": isHeaderMenu}).menu__item
-          if (isHeaderMenu)
-            a(href="" class=["main-header__button", "menu__button", {"menu__button--pressed": index === 0}])= item
-          else
-            button(type="button" class=["menu__button", {"menu__button--pressed": index === 0}])= item
+        li(class= childSelectors.item).menu__item
+          button(type="button" class=["menu__button", {"menu__button--pressed": index === 0}, childSelectors.button])= item

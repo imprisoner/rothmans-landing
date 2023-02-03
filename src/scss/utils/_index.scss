@@ -1,6 +1,6 @@
 .convex {
     padding: 80px 0;
-    background: $background;
+    background: $background-1;
     overflow-x: clip;
     position: relative;
 
@@ -10,7 +10,7 @@
         right: -200px;
         position: absolute;
         z-index: -1;
-        background: $background;
+        background: $background-1;
     }
     
     &--top {

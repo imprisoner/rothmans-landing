@@ -1,7 +1,9 @@
 include ../../components/menu.pug
 - var menuItems = ["Лендинг", "Интернет-магазин", "Корпоративный сайт", "Дизайн"]
 section(id="service").s-service.convex.convex--top.convex--bottom
-  div.container
+  div.s-service__container.container
+    div.combs.s-service__combs
+      include ../../../assets/svg/combs-3.svg
     div.row.s-service__top
       h2.s-service__heading.text-heading.text-heading--2.col-xl-5.col-12 Услуги
       +menu(menuItems)(class="s-service__menu col-xl-7 col-12")

@@ -1,6 +1,10 @@
 .s-contacts {
   padding-bottom: 120px;
 
+  &__container {
+    position: relative;
+  }
+
   &__top {
     margin-bottom: 60px;
     text-align: center;
@@ -38,6 +42,25 @@
   &__policy-text {
     @include max-width(md) {
       width: 225px;
+    }
+  }
+
+  &__combs-1 {
+    bottom: -100px;
+    left: -120px;
+
+    @include max-width(xl) {
+      bottom: -135px;
+      left: -300px;
+    }
+  }
+
+  &__combs-2 {
+    top: -20px;
+    right: -110px;
+
+    @include max-width(xl) {
+      display: none;
     }
   }
 }

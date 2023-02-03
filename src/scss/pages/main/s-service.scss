@@ -1,5 +1,9 @@
 .s-service {
   
+  &__container {
+    position: relative;
+  }
+
   &__top {
     margin-bottom: 80px;
     align-items: center;
@@ -35,8 +39,6 @@
       flex-direction: column;
     }
   }
-
-  &__options-section {}
 
   &__subheader {
     margin-bottom: 40px;
@@ -76,4 +78,17 @@
     color: $text;
   }
 
+  &__combs {
+    position: absolute;
+    left: -30px;
+    bottom: -20px;
+
+    @include max-width(xl) {
+      left: unset;
+      bottom: unset;
+      right: -260px;
+      top: -90px;
+      transform: scaleX(-1);
+    }
+  }
 }
