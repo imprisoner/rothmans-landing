@@ -20,20 +20,18 @@
   }
 
   &__close {
-    display: none;
-
-    @include max-width(md) {
-      display: block;
-      width: 40px;
-      height: 40px;
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      color: $text;
-    }
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: $text;
+    cursor: pointer;
   }
 
   &__dialog {
+    position: relative;
     display: grid;
     width: 750px;
     padding: 60px 40px;
