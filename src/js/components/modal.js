@@ -1,6 +1,7 @@
 const selectors = {
   modal: "#cm",
-  trigger: "#cm_trigger"
+  trigger: "#cm_trigger",
+  close: ".modal__close"
 }
 
 const classNames = {
@@ -12,9 +13,8 @@ export default function modal() {
   
   const overlay = document.querySelector(selectors.modal)
   const trigger = document.querySelector(selectors.trigger)
+  const close = overlay.querySelector(selectors.close)
 
-  console.log(overlay)
-  console.log(trigger)
 
   trigger.addEventListener("click", (event) => {
     document.body.classList.add(classNames.bodyNoScroll)
@@ -24,6 +24,11 @@ export default function modal() {
   overlay.addEventListener("click", (event) => {
     if (event.target !== overlay) return
 
+    overlay.classList.remove(classNames.activeModal)
+    document.body.classList.remove(classNames.bodyNoScroll)
+  })
+
+  close.addEventListener("click", (event) => {
     overlay.classList.remove(classNames.activeModal)
     document.body.classList.remove(classNames.bodyNoScroll)
   })
