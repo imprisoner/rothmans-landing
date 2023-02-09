@@ -1,0 +1,41 @@
+.contacts-form {
+  display: grid;
+  gap: 30px;
+
+  @include max-width(md) {
+    gap: 20px;
+  }
+  
+  &__subsection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: inherit;
+
+    @include max-width(md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__actions {
+    justify-self: center;
+
+    @include max-width(md) {
+      justify-self: stretch;
+    }
+  }
+
+  &__policy {
+    justify-content: center;
+    @include max-width(md) {
+      justify-content: start;
+      align-items: start;
+      text-align: left;
+    }
+  }
+
+  &__policy-text {
+    @include max-width(md) {
+      width: 225px;
+    }
+  }
+}

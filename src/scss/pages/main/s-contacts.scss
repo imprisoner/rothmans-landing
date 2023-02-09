@@ -15,36 +15,6 @@
     }
   }
 
-  &__form {
-    row-gap: 30px;
-
-    @include max-width(md) {
-      row-gap: 20px;
-    }
-  }
-
-  &__actions {
-    justify-self: center;
-
-    @include max-width(md) {
-      justify-self: stretch;
-    }
-  }
-
-  &__policy {
-    justify-content: center;
-    @include max-width(md) {
-      justify-content: start;
-      align-items: start;
-    }
-  }
-
-  &__policy-text {
-    @include max-width(md) {
-      width: 225px;
-    }
-  }
-
   &__combs-1 {
     bottom: -100px;
     left: -120px;

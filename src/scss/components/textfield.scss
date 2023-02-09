@@ -5,17 +5,17 @@
   background: $background-1;
   box-shadow: -10px -10px 18px rgba(255, 255, 255, 0.25), 10px 10px 18px rgba(94, 93, 121, 0.02), inset -10px -10px 18px rgba(255, 255, 255, 0.75), inset 10px 10px 18px rgba(94, 93, 121, 0.05);
   border-radius: 10px;
-  text-transform: uppercase;
   padding-left: 40px;
   width: 100%;
   letter-spacing: 0.1em;
   border: none;
-
+  
   @include max-width(md) {
     height: 69px;
   }
-
+  
   &::placeholder {
+    text-transform: uppercase;
     color: $text--lighter;
   }
 

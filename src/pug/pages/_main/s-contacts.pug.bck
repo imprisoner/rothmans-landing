@@ -1,0 +1,24 @@
+section(id="contacts").s-contacts.convex.convex--top
+  div.s-contacts__container.container
+    div.combs.s-contacts__combs-1
+      include ../../../assets/svg/combs-4.svg
+    div.combs.s-contacts__combs-2
+      include ../../../assets/svg/combs-5.svg
+    div.s-contacts__top.row
+      h2.s-contacts__heading.col-12.text-heading.text-heading--2 Контакты
+      p.s-contacts__text.col-12.text-body.text-body--18 У вас есть инетерсный проект? #[br] Напишите нам, и мы его разработаем
+    form.s-contacts__form.row
+      div.col-xl-8.offset-xl-2.col-12
+        input(placeholder="имя").textfield.text-body.text-body
+      div.col-xl-4.offset-xl-2.col-md-6.col-12
+        input(placeholder="+7 (965) 664-73-98").textfield.text-body
+      div.col-xl-4.col-md-6.col-12
+        input(placeholder="электронная почта").textfield.text-body
+      div.col-xl-8.offset-xl-2.col-12
+        label.s-contacts__policy.checkbox
+          input(type="checkbox" id="policy" hidden).checkbox__input
+          div.checkbox__view
+          p.s-contacts__policy-text.checkbox__label-text.text-body Нажимая на кнопку «Отправить», я принимаю условия политики конфиденциальности
+        //- checkbox
+      div.s-contacts__actions.col-12
+        button(type="submit").button-xl Отправить
