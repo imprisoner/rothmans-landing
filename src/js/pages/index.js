@@ -1,7 +1,10 @@
+"use strict"
+
 import Swiper, { Navigation } from 'swiper'
 import initMenu from "../components/menu.js";
 import SlidesCounter from "../components/slidesCounter.js"
 import headerMenu from "../components/headerMenu.js"
+import modal from "../components/modal.js"
 
 
 const selectors = {
@@ -58,4 +61,4 @@ const casesSlider = new Swiper(selectors.sliders.cases, {
 })
 
 headerMenu()
-
+modal()

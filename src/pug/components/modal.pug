@@ -1,0 +1,6 @@
+mixin modal(headingText)
+  div.modal&attributes(attributes)
+    div.modal__dialog
+      if (headingText)
+        h2.modal__heading.text-heading.text-heading--2= headingText
+      block

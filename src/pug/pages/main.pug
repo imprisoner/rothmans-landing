@@ -1,7 +1,11 @@
 extends ../layouts/main.pug
+include ../components/modal.pug
 block page_content
-  include _main/s-title.pug
-  include _main/s-cases.pug
-  include _main/s-service.pug
-  include _main/s-stats.pug
-  include _main/s-contacts.pug
+  main
+    +modal("Связаться с нами")#cm
+      include ../includes/contacts-form.pug
+    include _main/s-title.pug
+    include _main/s-cases.pug
+    include _main/s-service.pug
+    include _main/s-stats.pug
+    include _main/s-contacts.pug

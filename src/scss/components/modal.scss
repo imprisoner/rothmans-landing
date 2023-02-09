@@ -1,0 +1,39 @@
+.modal {
+  display: none;
+  
+  &__active {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgb(99, 98, 98);
+    z-index: 999;
+  }
+  &__dialog {
+    display: grid;
+    width: 750px;
+    padding: 60px 40px;
+    background: $background-1;
+    border-radius: 10px;
+    align-content: center;
+    row-gap: 60px;
+    @include max-width(md) {
+      padding-left: 15px;
+      padding-right: 15px;
+      width: 100vw;
+      height: 100vh;
+    }
+  }
+
+  &__heading {
+    text-align: center;
+    // justify-self: center;
+    @include max-width(md) {
+      width: min-content;
+      text-align: left;
+    }
+  }
+}

@@ -14,10 +14,9 @@ anchors.forEach(anchor => {
 })
 
 export default function headerMenu() {
-
   let current = null
 
-  document.addEventListener('scroll', (e) => {
+  document.addEventListener('scroll', (event) => {
     anchors.forEach(anchor => {
       if (window.scrollY >= scrollPoints[anchor]) {
         current = anchor
