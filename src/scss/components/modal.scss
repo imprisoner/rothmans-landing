@@ -14,7 +14,7 @@
     overflow-y: auto;
     padding: 40px;
     // 
-    animation: fadeIn .8s forwards;
+    animation: fadeIn .6s forwards;
     @include max-width(md) {
       padding: unset;
     }

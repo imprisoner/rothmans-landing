@@ -22,7 +22,6 @@ const selectors = {
 const menusCollection = document.querySelectorAll(selectors.menus)
 
 menusCollection.forEach(menu => initMenu(menu))
-console.log(menusCollection)
 
 const titleCounter = new SlidesCounter(selectors.counters.title)
 

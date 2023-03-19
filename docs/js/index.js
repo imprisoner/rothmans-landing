@@ -13115,7 +13115,6 @@ const selectors = {
 const menusCollection = document.querySelectorAll(selectors.menus)
 
 menusCollection.forEach(menu => (0,_components_menu_js__WEBPACK_IMPORTED_MODULE_1__["default"])(menu))
-console.log(menusCollection)
 
 const titleCounter = new _components_slidesCounter_js__WEBPACK_IMPORTED_MODULE_2__["default"](selectors.counters.title)
 

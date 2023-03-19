@@ -18,7 +18,6 @@ export default function modal() {
 
   trigger.addEventListener("click", (event) => {
     const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth
-    console.log(scrollBarWidth)
     document.body.style.paddingRight = `${scrollBarWidth}px`
     document.body.classList.add(classNames.bodyNoScroll)
     overlay.classList.add(classNames.activeModal)
