@@ -7,3 +7,13 @@
     opacity: 1;
   }
 }
+
+@keyframes bgChange {
+  from {
+    background-color: #FF7337;
+  }
+
+  to {
+    background-color: $background-1;
+  }
+}

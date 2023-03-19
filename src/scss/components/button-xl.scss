@@ -16,7 +16,7 @@
   color: $white;
   text-align: center;
   transition: all .2s ease-in-out;
-
+  animation: .3s ease-in-out;
   
   @include max-width(md) {
     height: 69px;
@@ -28,14 +28,13 @@
     color: $orange;
     /* hover 2 */
     box-shadow: -10px -10px 18px rgba(255, 255, 255, 0.5), 10px 10px 18px rgba(94, 93, 121, 0.05), inset -10px -10px 30px rgba(255, 255, 255, 0.75), inset 10px 10px 30px rgba(94, 93, 121, 0.1);
-    
+    animation-name: bgChange;
     &::after {
       animation: fadeIn .3s;
       content: url("data:image/svg+xml; utf8, %3Csvg width='5' height='10' viewBox='0 0 7 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m1 1 5 5-5 5' stroke='%23FF5C16' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
       display: block;
       width: 5px;
       height: 10px;
-      
     }
   }
 }
