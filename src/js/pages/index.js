@@ -29,13 +29,18 @@ const titleCounter = new SlidesCounter(selectors.counters.title)
 const titleSlider = new Swiper(selectors.sliders.title, {
   modules: [Navigation],
   spaceBetween:120,
+  loop: true,
   navigation: {
     prevEl:".s-title__button-prev",
     nextEl: ".s-title__button-next",
   },
   on: {
-    init: (swiper) => titleCounter.init(swiper.slides.length),
-    slideChange: (swiper) => titleCounter.setCurrent(swiper.activeIndex)  
+    init: (swiper) => {
+      titleCounter.init(swiper.slides.length - swiper.loopedSlides*2)
+    },
+    slideChange: (swiper) => {
+      titleCounter.setCurrent(swiper.realIndex)
+    } 
   }
 })
 

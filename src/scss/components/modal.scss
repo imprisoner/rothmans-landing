@@ -1,6 +1,6 @@
 .modal {
   display: none;
-  
+  opacity: 0;
   &__active {
     display: grid;
     place-items: center;
@@ -13,7 +13,8 @@
     z-index: 999;
     overflow-y: auto;
     padding: 40px;
-
+    // 
+    animation: fadeIn .8s forwards;
     @include max-width(md) {
       padding: unset;
     }

@@ -17,18 +17,22 @@ export default function modal() {
 
 
   trigger.addEventListener("click", (event) => {
+    const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth
+    console.log(scrollBarWidth)
+    document.body.style.paddingRight = `${scrollBarWidth}px`
     document.body.classList.add(classNames.bodyNoScroll)
     overlay.classList.add(classNames.activeModal)
   })
   
   overlay.addEventListener("click", (event) => {
     if (event.target !== overlay) return
-
+    document.body.style.paddingRight = ""
     overlay.classList.remove(classNames.activeModal)
     document.body.classList.remove(classNames.bodyNoScroll)
   })
 
   close.addEventListener("click", (event) => {
+    document.body.style.paddingRight = ""
     overlay.classList.remove(classNames.activeModal)
     document.body.classList.remove(classNames.bodyNoScroll)
   })

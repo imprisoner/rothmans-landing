@@ -20,7 +20,7 @@ export default class SlidesCounter {
   }
 
   init(num) {
-    this.setCurrent(1)
+    this.setCurrent(0)
     this.setTotal(num)
   }
 }
