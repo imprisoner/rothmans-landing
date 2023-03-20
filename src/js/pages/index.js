@@ -1,6 +1,6 @@
 "use strict"
 
-import Swiper, { Navigation } from 'swiper'
+import Swiper, { Navigation, EffectFade, Autoplay } from 'swiper'
 import initMenu from "../components/menu.js";
 import SlidesCounter from "../components/slidesCounter.js"
 import headerMenu from "../components/headerMenu.js"
@@ -26,13 +26,19 @@ menusCollection.forEach(menu => initMenu(menu))
 const titleCounter = new SlidesCounter(selectors.counters.title)
 
 const titleSlider = new Swiper(selectors.sliders.title, {
-  modules: [Navigation],
+  modules: [Navigation, EffectFade],
   spaceBetween:120,
   loop: true,
   navigation: {
     prevEl:".s-title__button-prev",
     nextEl: ".s-title__button-next",
   },
+  speed: 800,
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true,
+  },
+  // autoplay: true,
   on: {
     init: (swiper) => {
       titleCounter.init(swiper.slides.length - swiper.loopedSlides*2)
@@ -60,9 +66,25 @@ const casesSlider = new Swiper(selectors.sliders.cases, {
   },
   on: {
     init: (swiper) => casesCounter.init(swiper.slides.length),
-    slideChange: (swiper) => casesCounter.setCurrent(swiper.activeIndex)  
+    slideChange: (swiper) => casesCounter.setCurrent(swiper.activeIndex),
+    beforeDestroy: () => console.log('onBeforeDestroy')
   }
 })
 
 headerMenu()
 modal()
+
+
+// animating dynamic height TODO
+
+const node = document.querySelector('.s-cases__text');
+
+function callback(mr) {
+  console.log(mr)
+  const [record] = mr
+  node.style.height = record.target.clientHeight + 'px'
+};
+const observer = new MutationObserver(callback);
+observer.observe(node, 
+  {childList: true, subtree: true, characterData: true}
+);
