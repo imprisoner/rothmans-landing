@@ -1,5 +1,5 @@
 .s-cases {
-  
+  transition: height .8s ease-in-out;
   &__top {
     margin-bottom: 50px;
     align-items: center;
@@ -42,10 +42,7 @@
       margin-left: unset;
     }
   }
-  &__text {
-    height: 85px;
-    transition: height .8s ease-in-out;
-  }
+
   &__chunk-1 {
     @include max-width(md) {
       margin-bottom: 10px;

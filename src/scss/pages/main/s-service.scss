@@ -60,7 +60,12 @@
     flex-direction: column;
     row-gap: 14px;
     column-gap: 40px;
-    max-height: 150px;
+    // max-height: 150px;
+
+    &--two-columns {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
 
     @include max-width(md) {
       display: grid;
