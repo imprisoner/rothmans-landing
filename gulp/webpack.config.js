@@ -17,7 +17,8 @@ const pageScripts = fs
   .map(item => [item.name.replace(".js", ""), { import: "@pages/" + item.name }])
 
 export default {
-  mode: "development",
+  // mode: "development",
+  mode: "production",
   resolve: {
     extensions: [".js", ".mjs"],
     alias: {
@@ -25,7 +26,7 @@ export default {
       "@pages": PAGES_DIR
     }
   },
-  devtool: "inline-source-map",
+  // devtool: "inline-source-map",
   entry: {
     ...Object.fromEntries(pageScripts),
   },
