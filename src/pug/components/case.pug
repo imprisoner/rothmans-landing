@@ -1,6 +1,10 @@
+- const stubText = "Это самое лучшее описание кейса, которое вы когда либо видели.Это самое лучшее описание кейса, которое вы когда либо видели.Это самое лучшее описание кейса, которое вы когда либо видели"
+
 mixin case(image, num, name="Название проекта")
   div.case
     div.case__top
+      a(href="#").case__overlay
+        p.case__text= text || stubText
       img(src=`/assets/images/${image}.png`).case__image
     div.case__bottom
       span.case__num.text-body.text-body--18= num

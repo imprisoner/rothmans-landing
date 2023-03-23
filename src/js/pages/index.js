@@ -5,6 +5,7 @@ import initMenu from "../components/menu.js";
 import SlidesCounter from "../components/slidesCounter.js";
 import headerMenu from "../components/headerMenu.js";
 import modal from "../components/modal.js";
+import setHeightTransition from "../components/hieghtTransitions.js";
 
 const selectors = {
   sliders: {
@@ -73,44 +74,19 @@ const casesSlider = new Swiper(selectors.sliders.cases, {
 headerMenu();
 modal();
 
-// animating dynamic height TODO
+// animate sections
 
-const optionsWrap = document.querySelector(".s-service__options");
-const tabs = document.querySelector(".s-service__menu");
+const animative = [
+  {
+    target: "#observable1",
+    changeTrigger: ".s-cases__menu",
+    initialHeight: 85,
+  },
+  {
+    target: "#observable2",
+    changeTrigger: ".s-service__menu",  
+    initialHeight: 220
+  },
+];
 
-const initialHeight = 220;
-
-const getChildren = () => Array.from(optionsWrap.children);
-
-// set height: fit-content to childElements
-getChildren().forEach((child) => (child.style.height = "fit-content"));
-// set height and transition to optionsWrap
-optionsWrap.style.transition = "height 0.8s";
-
-if (optionsWrap.offsetHeight < initialHeight) {
-  optionsWrap.style.height = initialHeight + "px";
-} else {
-  optionsWrap.style.height = optionsWrap.offsetHeight + "px"
-}
-
-tabs.addEventListener("click", () => {
-  setTimeout(() => {
-    const optionsWrap = document.querySelector(".s-service__options");
-    
-    if (optionsWrap.offsetHeight < optionsWrap.scrollHeight) {
-      optionsWrap.style.height = optionsWrap.scrollHeight + "px";
-    } else {
-      // get highest children height value
-      const [height] = getChildren()
-      .map((child) => child.offsetHeight)
-      .sort((a, b) => b - a);
-
-      if (initialHeight > height) {
-        optionsWrap.style.height = initialHeight + "px";
-        return;
-      }
-
-      optionsWrap.style.height = height + "px";
-    }
-  })
-});
+animative.forEach(setHeightTransition)
