@@ -10,22 +10,23 @@ import setHeightTransition from "../components/hieghtTransitions.js";
 const selectors = {
   sliders: {
     title: "#title_slider",
-    cases: "#cases_slider",
+    cases: "#cases .swiper",
   },
   counters: {
     title: "#title_counter",
-    cases: "#cases_counter",
+    cases: "#cases .slides-counter",
   },
   menus: ".menu",
 };
 
 document.addEventListener("DOMContentLoaded", () => {
   const menusCollection = document.querySelectorAll(selectors.menus);
-  
+
   menusCollection.forEach((menu) => initMenu(menu));
-  
-  const titleCounter = new SlidesCounter(selectors.counters.title);
-  
+
+  let titleCounter = document.querySelector(selectors.counters.title);
+  titleCounter = new SlidesCounter(titleCounter);
+
   const titleSlider = new Swiper(selectors.sliders.title, {
     modules: [Navigation, EffectFade],
     spaceBetween: 120,
@@ -49,34 +50,46 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     },
   });
-  
+
   //
-  const casesCounter = new SlidesCounter(selectors.counters.cases);
-  
-  const casesSlider = new Swiper(selectors.sliders.cases, {
-    modules: [Navigation],
-    spaceBetween: 30,
-    navigation: {
-      prevEl: ".s-cases__button-prev",
-      nextEl: ".s-cases__button-next",
-    },
-    breakpoints: {
-      1280: {
-        slidesPerView: 2,
+  let casesCounters = document.querySelectorAll(selectors.counters.cases);
+
+  casesCounters = Array.from(casesCounters).map((el) => new SlidesCounter(el));
+  console.log(casesCounters);
+  const casesSliders = document.querySelectorAll(selectors.sliders.cases);
+
+  const sliderControls = document.querySelectorAll(".s-cases__controls");
+
+  casesSliders.forEach((item, index) => {
+    new Swiper(item, {
+      modules: [Navigation],
+      spaceBetween: 30,
+      navigation: {
+        prevEl: sliderControls[index].querySelector(".s-cases__button-prev"),
+        nextEl: sliderControls[index].querySelector(".s-cases__button-next"),
       },
-    },
-    on: {
-      init: (swiper) => casesCounter.init(swiper.slides.length),
-      slideChange: (swiper) => casesCounter.setCurrent(swiper.activeIndex),
-      beforeDestroy: () => console.log("onBeforeDestroy"),
-    },
+      breakpoints: {
+        1280: {
+          slidesPerView: 2,
+        },
+      },
+      on: {
+        init: (swiper) => {
+          casesCounters[index].init(swiper.slides.length);
+        },
+        slideChange: (swiper) => casesCounters[index].setCurrent(swiper.activeIndex),
+        observerUpdate: (swiper) => casesCounters[index].init(swiper.slides.length)
+      },
+      observer: true,
+      observeParents: true,
+    });
   });
-  
+
   headerMenu();
   modal();
-  
+
   // animate sections
-  
+
   const animative = [
     {
       target: "#observable1",
@@ -85,10 +98,10 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       target: "#observable2",
-      changeTrigger: ".s-service__menu",  
-      initialHeight: 220
+      changeTrigger: ".s-service__menu",
+      initialHeight: 220,
     },
   ];
-  
-  animative.forEach(setHeightTransition)
-})
+
+  animative.forEach(setHeightTransition);
+});

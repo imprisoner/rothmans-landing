@@ -4,18 +4,18 @@ const selectors = {
 }
 
 export default class SlidesCounter {
-  constructor(counterSelector) {
-    const counterElement = document.querySelector(counterSelector)
-
+  constructor(counterElement) {
+    // const counterElement = document.querySelector(counterSelector)
     this._current = counterElement.querySelector(selectors.current)
     this._total = counterElement.querySelector(selectors.total)
   }
-
+  
   setCurrent(index) {
     this._current.innerText = parseNum(index + 1)
   }
-
+  
   setTotal(length) {
+    console.log('Total slides \n', length)
     this._total.innerText = parseNum(length)
   }
 

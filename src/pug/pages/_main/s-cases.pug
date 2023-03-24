@@ -25,7 +25,7 @@ section(id="cases").s-cases.concave
         }
 
       +slider-controls(casesControlsSelectors).s-cases__controls
-        +slides-counter.s-cases__counter#cases_counter
+        +slides-counter.s-cases__counter
 
       div.col-lg-12.s-cases__slider
         div(id="cases_slider").swiper
@@ -38,3 +38,16 @@ section(id="cases").s-cases.concave
               +case("case-3", "03")
             div.swiper-slide
               +case("case-4", "04")
+
+      +slider-controls(casesControlsSelectors).s-cases__controls
+        +slides-counter.s-cases__counter
+
+      div(style="display: none;").col-lg-12.s-cases__slider
+        div(id="cases_slider").swiper
+          div.swiper-wrapper
+            div.swiper-slide
+              +case("case-1", "01")
+            div.swiper-slide
+              +case("case-2", "02")
+            div.swiper-slide
+              +case("case-3", "03")
